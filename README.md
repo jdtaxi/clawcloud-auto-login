@@ -1,4 +1,4 @@
-# ☁️ ClawCloud 自动保活脚本 (Node.js 版)
+# ☁️ ClawCloud 自动保活脚本
 
 这是一个基于 **GitHub Actions** 和 **Playwright** 的自动化脚本，用于定时登录 ClawCloud 面板以保持账号活跃。
 
