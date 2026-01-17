@@ -1,4 +1,4 @@
-name: ClawCloud 自动登录保活
+name: ClawCloud 自动登录保活py
 
 on:
   schedule:
