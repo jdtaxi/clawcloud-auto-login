@@ -31,7 +31,7 @@ jobs:
           GH_PASSWORD: ${{ secrets.GH_PASSWORD }}
           GH_2FA_SECRET: ${{ secrets.GH_2FA_SECRET }}
         
-        run: python -u login_script.py
+        run: python -u script/login_script.py
 
       - name: Upload Debug Screenshot
         if: always()
