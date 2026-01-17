@@ -397,7 +397,7 @@ class AutoLogin {
             try {
                 await page.goto(u, { timeout: 30000 });
                 await page.waitForLoadState('networkidle');
-                logger.log(`已访问: ${u}`, "SUCCESS");
+                logger.log(`已访问: ${page.url()}`, "SUCCESS");
                 await sleep(2000);
             } catch(e) {}
         }
@@ -493,7 +493,7 @@ class AutoLogin {
             logger.log("步骤4: 等待重定向", "STEP");
             let redirected = false;
             for (let i = 0; i < 60; i++) {
-                if (page.url().includes('claw.cloud') && !page.url().toLowerCase().includes('signin')) {
+                if (page.url().includes('claw.cloud') && !page.url().toLowerCase().includes('signin')&& !page.url().toLowerCase().includes('callback')) {
                     redirected = true;
                     break;
                 }
